@@ -10,6 +10,12 @@ class SortingAlgorithms:
     def __init__(self, list_to_sort) -> None:
         self.list_to_sort = list_to_sort
 
+    # since a swap appears a lot, i decided to generate a function
+    def swap_list_vals(self, list, pos1, pos2):
+        temp = list[pos1]
+        list[pos1] = list[pos2]
+        list[pos2] = temp
+
     # selection sort checks for all mins individually and arranges them:
     def selection_sort(self):
        
@@ -33,9 +39,27 @@ class SortingAlgorithms:
             if(last_min != pos):
                 #swap
                 print(self.list_to_sort[pos], "is about to be swapped with", self.list_to_sort[last_min])
-                temp = self.list_to_sort[pos]
-                self.list_to_sort[pos] = self.list_to_sort[last_min]
-                self.list_to_sort[last_min] = temp
-            
-        return self.list_to_sort
+                self.swap_list_vals(self.list_to_sort, pos, last_min)
                 
+            
+        #return self.list_to_sort
+
+    # bubble sort implementation
+    def bubble_sort(self):
+
+        swap_happened = True
+
+        while(swap_happened):
+            swap_happened = False # set to false to detect if a swap happened
+            # loop whole list
+            # swap if a number is smaller
+            for pos in range(len(self.list_to_sort) - 1):
+                if(self.list_to_sort[pos] > self.list_to_sort[pos + 1]):
+                    print("value swap:")
+                    swap_happened = True
+                    self.swap_list_vals(self.list_to_sort, pos, pos + 1)
+            
+
+
+
+

@@ -58,8 +58,19 @@ class SortingAlgorithms:
                     print("value swap:")
                     swap_happened = True
                     self.swap_list_vals(self.list_to_sort, pos, pos + 1)
-            
 
+    # insertion sort implementation        
+    def insertion_sort(self):
+        # compare elements and if sorted in relation to the next one, add to sorted sub-array else keep swapping and comparing
 
+        start_of_unordered = 0
+        while(start_of_unordered < len(self.list_to_sort) - 1):
+            # loop from un-ordered section of array comparing to last element of the sorted portion
+            if(self.list_to_sort[start_of_unordered] > self.list_to_sort[start_of_unordered + 1]):
+                self.swap_list_vals(self.list_to_sort, start_of_unordered, start_of_unordered + 1)
 
-
+            if(start_of_unordered > 0 and self.list_to_sort[start_of_unordered - 1] > self.list_to_sort[start_of_unordered]):
+                print("a smaller element of", self.list_to_sort[start_of_unordered],"and", self.list_to_sort[start_of_unordered - 1], "is no longer ordered")
+                start_of_unordered -= 1
+            else:
+                start_of_unordered += 1   

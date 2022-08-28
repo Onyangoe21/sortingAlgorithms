@@ -4,6 +4,7 @@
 
 * This is a quick implementation of the different sorting algorithms. The essence of this repo is to practice the different sorting algorithms with better demonstrations of how the algorithm works.
 
+* The other important part of this document is that it gives a more detailed calculation of the runtime complexities.
 
 # Instructions on how to use:
 * This document only contains one major class with the different sorting algorithms:

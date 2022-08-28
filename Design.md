@@ -27,3 +27,10 @@ This design spec will include the following:
 ``` runs n-1 times each loop and in worst case scenario, sorting in ascending order involves the smallest number at end of list that has to be bubbled in n-1 runs: Thus, worst case is (n-1)*(n-1) ```
 
 * Big Omega(n)-- for in best case scenario, list is sorted and it loops it all with no change
+
+### insertion_sort()
+* This sorting method involves inserting value a current ordered portion provided it is greater than what is before and smaller thank next value. Otherwise, the value is not ordered and ordered portion becomes smaller to allow swaps. The runtime complexity is Big O(n squared): 
+``` runs at most n-1 for a single value, assuming the value is smallest and at the end and subsequently one lesser for each of the other values in other positions in the list.This leads to the sum 1 + 2 + ... n-2 + n-1 = (n-1)(n-1 + 1)/2: but this is  n(n-1)/2:```
+
+* Big Omega(n)-- for in best case scenario, list is sorted and it loops n - 1 times confirming that each value is ordered
+

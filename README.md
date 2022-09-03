@@ -2,6 +2,8 @@
 # Personal project
 # Author: Edwin Omondi Onyango
 
+### I am learning so feel free to correct any mistakes! Thank you!
+
 * This is a quick implementation of the different sorting algorithms. The essence of this repo is to practice the different sorting algorithms with better demonstrations of how the algorithm works(using print statements) and more detailed explanation.
 
 * The other important part of this document is that it gives a more detailed calculation of the runtime complexities.

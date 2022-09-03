@@ -16,7 +16,7 @@ class SortingAlgorithms:
         list[pos1] = list[pos2]
         list[pos2] = temp
 
-    # selection sort checks for all mins individually and arranges them:
+    ################### selection_sort #########################
     def selection_sort(self):
        
 
@@ -44,7 +44,7 @@ class SortingAlgorithms:
             
         #return self.list_to_sort
 
-    # bubble sort implementation
+    ################# bubble_sort #################
     def bubble_sort(self):
 
         swap_happened = True
@@ -59,7 +59,7 @@ class SortingAlgorithms:
                     swap_happened = True
                     self.swap_list_vals(self.list_to_sort, pos, pos + 1)
 
-    # insertion sort implementation        
+    ################ insertion_sort ################        
     def insertion_sort(self):
         # compare elements and if sorted in relation to the next one, add to sorted sub-array else keep swapping and comparing
 
@@ -74,3 +74,46 @@ class SortingAlgorithms:
                 start_of_unordered -= 1
             else:
                 start_of_unordered += 1   
+
+    ############# merge_sort and helper ####################
+    def merge_sort(self):
+        list = self.merge_helper2(self.list_to_sort)
+        return list
+
+    def merge_helper2(self, list_to_sort):
+        # recursive call after splitting the list into two
+        mid_point = len(list_to_sort)/2
+
+        left_list = list_to_sort[:int(mid_point)]
+        right_list = list_to_sort[int(mid_point):]
+        print(left_list, ",,,,,,,,", right_list)
+
+        # call merge_sort recursively
+        if(len(right_list) > 1):
+            right_list = self.merge_helper2(right_list)
+        if(len(left_list) > 1):
+            left_list = self.merge_helper2(left_list)
+
+        # Once the length is one, merge based on values:
+        return self.merge_helper(right_list, left_list)
+
+    # merge list 1 into list 2
+    def merge_helper(self, list1, list2):
+        start_point = 0
+
+        # bring the two lists together
+        for i in range(len(list1)):
+            if(start_point == len(list2)):
+                list2.extend(list1)
+                return list2
+            
+            while((start_point < len(list2)) and (list1[i] > list2[start_point])):
+                start_point += 1
+            
+            if(start_point >= len(list2)):
+                list2.append(list1[i])
+            else:
+                list2.insert(start_point, list1[i])
+
+        # return the merged list
+        return list2

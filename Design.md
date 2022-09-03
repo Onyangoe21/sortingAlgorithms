@@ -34,3 +34,11 @@ This design spec will include the following:
 
 * Big Omega(n)-- for in best case scenario, list is sorted and it loops n - 1 times confirming that each value is ordered
 
+### merge_sort()
+* This sorting method involves a "divide and conquer strategy where the list is continuously split into 2 until length 1 and then merged again based on which elements are bigger. This is done recursively in this implementation. As for the runtime complexity, the algorithmic flow is such that: 
+``` List is continusly split into 2: ```
+    ```(This is O(log(n)) --- base 2) ```
+    ```For each of these is a merge function that brings together both sides: it does it by performing extend or insert into the list and since insert is O(n) and extend is O(m) where m is length of 2nd list, the maximum number of times this can run is O(nlog(n)): This is an oversimplified way of saying it so, For more details on how this is reached, this recurrence relation takes the form of T(n) = 2T(n/2) + θ(n), which, if solved using the Master method, results to the answer above and show why you could say the same about the lower bound.```
+
+* Big Theta(n log n)-- explained above
+

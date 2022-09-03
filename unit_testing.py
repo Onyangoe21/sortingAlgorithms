@@ -47,3 +47,18 @@ list_sorter.insertion_sort()
 
 print("list after sorting")
 print(list)
+
+print("#########################   merge_sort   ########################")
+list = [34, 56, 12, 1, -1, 90, 45, 3, 12, 25]
+list_sorter = SortingAlgorithms(list)
+
+print("Now testing the insertion sort")
+# print list before sorting
+print("list before sorting")
+print(list)
+
+# print list after sorting
+list = list_sorter.merge_sort()
+
+print("list after sorting")
+print(list)

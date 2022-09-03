@@ -1,8 +1,8 @@
-# Sorting Algorithms README.md
+# Sorting Algorithms for dummies README.md
 # Personal project
 # Author: Edwin Omondi Onyango
 
-* This is a quick implementation of the different sorting algorithms. The essence of this repo is to practice the different sorting algorithms with better demonstrations of how the algorithm works.
+* This is a quick implementation of the different sorting algorithms. The essence of this repo is to practice the different sorting algorithms with better demonstrations of how the algorithm works(using print statements) and more detailed explanation.
 
 * The other important part of this document is that it gives a more detailed calculation of the runtime complexities.
 

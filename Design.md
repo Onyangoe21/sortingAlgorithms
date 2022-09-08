@@ -42,3 +42,13 @@ This design spec will include the following:
 
 * Big Theta(n log n)-- explained above
 
+### heap_sort
+
+* This sorting algorithm involves use of a heap. In this example, I use a min heap which results into a descending order and then i return the list in reverse.
+* It is important to note that I do not modify the list given for this example, i simply return a new list, which is not a good example for an in-place algorithm like heap sort but is done for uniformity.
+* As for runtime, a new min is picked (n-1) times which results into:
+    ```(n-1) * runtime complexity to maintain heap.```
+    ```The runtime complexity to maintain the heap, even though done recursively, is at most log n time(base 2) because of the tree structure whose height is log n: where n is number of nodes:```
+    ```Thus, the runtime is O(n log n)```
+
+
